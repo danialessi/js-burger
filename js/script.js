@@ -25,8 +25,23 @@ button.addEventListener('click', function(){
         }
     
     }
-    console.log(finalPrice);
+    
+    // assegno variabile coupon all'elemento html 
+    var coupon = document.getElementById("coupon");
 
+    // assegno variabili agli sconti 
+    var discount10 = (finalPrice * 10) / 100;
+    var discount40 = (finalPrice * 40) / 100;
+    // console.log(discount10);
+    
+    // genero condizioni per codici sconto 
+    if (coupon.value === "sconto10") {
+        finalPrice = finalPrice - discount10;
+        // console.log("prezzo dopo sconto", finalPrice);
+    } else if (coupon.value === "sconto40") {
+        finalPrice = finalPrice - discount40;
+        console.log("prezzo dopo sconto", finalPrice);
+    }
     // assegno il risultato all'elemento html 
     document.getElementById("final-price").innerHTML = finalPrice + " $";
-})
+});
