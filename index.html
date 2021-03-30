@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- header  -->
+        <header>
+            <div class="title-wrapper">
+                <h1>Create Your Burger</h1>
+            </div>
+        </header>
+        <!-- end header  -->
+
+        <!-- main  -->
+        <main>
+            <section class="main-content-wrapper">
+
+                <input class="burger-name" type="text" placeholder="Name Your Burger">
+
+                <div class="ingredients">
+                    <h3>Ingredients</h3>
+
+                    <ul class="ingredients-list">
+                        <li>Cheese +3$
+                            <input id="cheese" class="add" type="checkbox" value="3">
+                        </li>
+                        <li>Egg +5$
+                            <input id="egg" class="add" type="checkbox" value="5">
+                        </li>
+                        <li>Mustard +3$
+                            <input id="mustard" class="add" type="checkbox" value="3">
+                        </li>
+                    </ul>
+
+                    <ul class="ingredients-list">
+                        <li>Tomato +3$
+                            <input id="tomato" class="add" type="checkbox" value="3">
+                        </li>
+                        <li>Lettuce +2$
+                            <input id="lettuce" class="add" type="checkbox" value="2">
+                        </li>
+                        <li>Ketchup +1$
+                            <input id="ketchup" class="add" type="checkbox" value="1">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="coupon">
+                    <span>Discount Coupon</span>
+                    <span><input type="text" placeholder="insert coupon"></span>
+                </div>
+            </section>
+
+            <section>
+                <button id="calculate">Calculate</button>
+            </section>
+        </main>
+        <!-- end main  -->
+
+        <!-- footer  -->
+        <footer class="footer-wrapper">
+            <div class="total">
+                
+                <h2>Your Price</h2>
+                <h3 class="final-price">50$</h3>
+
+            </div>
+        </footer>
+        <!-- end footer  -->
+    </div>
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
