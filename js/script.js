@@ -31,17 +31,37 @@ button.addEventListener('click', function(){
 
     // assegno variabili agli sconti 
     var discount10 = (finalPrice * 10) / 100;
+
     var discount40 = (finalPrice * 40) / 100;
-    // console.log(discount10);
     
+    // variabile per elemento html discount 
+    var discount = document.getElementById("discount");
+    var discountText = document.getElementById("discount-text");
+    // console.log(discount);
+
+    var total = 0;
     // genero condizioni per codici sconto 
     if (coupon.value === "sconto10") {
-        finalPrice = finalPrice - discount10;
-        // console.log("prezzo dopo sconto", finalPrice);
+        total = finalPrice - discount10;
+        discount.innerHTML = "-10%";
+        discountText.innerHTML = "Discount";
+        
     } else if (coupon.value === "sconto40") {
-        finalPrice = finalPrice - discount40;
-        console.log("prezzo dopo sconto", finalPrice);
+        total = finalPrice - discount40;
+        discount.innerHTML = "-40%";
+        discountText.innerHTML = "Discount";
+        
+    } else {
+        total = finalPrice;
     }
-    // assegno il risultato all'elemento html 
-    document.getElementById("final-price").innerHTML = finalPrice + " $";
+    
+    // popolo il footer con nome panino
+    var choice = document.getElementById("choice");
+    choice.innerHTML = document.getElementById("burger").value;
+
+    // assegno il prezzo finale all'elemento html 
+    document.getElementById("price").innerHTML = finalPrice + " $";
+
+    // assegno il totale all elemento html 
+    document.getElementById("total").innerHTML = total + " $";
 });

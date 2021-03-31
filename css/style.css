@@ -11,48 +11,124 @@ body {
 .wrapper {
     height: 100vh;
 }
-/* header  */
+
+img {
+    width: 20%;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+/* HEADER  */
 .title-wrapper {
-    height: 100px;
+    height: 90px;
     width: 50%;
     background-color: #fdbc41;
-    padding: 30px 20px;
+    padding: 20px 20px;
 }
-/* end header  */
+/* END HEADER  */
 
-/* main  */
+/* MAIN  */
 main {
-    height: calc(100% - 180px);
+    height: calc(100% - 190px);
+    overflow-y: auto;
 }
 
 .main-content-wrapper {
+    width: 50%;
     padding: 20px;
 }
 
 .burger-name {
-    padding: 10px;
+    padding: 8px 0;
     margin-bottom: 10px;
+    border: 0;
+}
+
+/* ingredients  */
+.ingredients {
+    display: flex;
+}
+
+.ingredients-title {
+    color: rgba(15, 6, 6, 0.719);
+    padding-top: 5px;
 }
 
 .ingredients-list {
-    float: left;
     list-style-type: none;
-    padding-right: 80px;
+    padding-right: 40px;
+    font-size: 15px;
 }
 
+li {
+    padding: 20px 0;
+}
+/* ingredients  */
 
-/* end main  */
+.coupon-container {
+    padding: 10px 0;
+}
 
-/* footer  */
+.coupon-title {
+    font-weight: bold;
+    color: rgba(15, 6, 6, 0.719);
+    font-size: 14px;
+}
+
+#coupon {
+    padding: 5px 150px 5px 0;
+    background-color: pink;
+    border: 0;
+    border-radius: 5px;
+}
+
+.button-container {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#calculate {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #fdbc41;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* END MAIN  */
+
+/* FOOTER  */
 .footer-wrapper {
-    height: 80px;
+    height: 100px;
     width: 50%;
     background-color: #d23359;
+    color: white;
 }
 
-.total {
+.price-box {
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-/* end footer  */
+
+.discount-box {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+}
+
+.total-box {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#your-price, #total {
+    font-size: 25px;
+}
+/* END FOOTER  */

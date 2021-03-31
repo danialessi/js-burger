@@ -24,43 +24,51 @@
         <main>
             <section class="main-content-wrapper">
 
-                <input class="burger-name" type="text" placeholder="Name Your Burger">
+                <input id="burger" class="burger-name" type="text" value= "" placeholder="Name Your Burger">
 
+                <!-- ingredients  -->
+                <h3 class="ingredients-title">Ingredients</h3>
                 <div class="ingredients">
-                    <h3>Ingredients</h3>
 
                     <ul class="ingredients-list">
-                        <li>Cheese +3$
+                        <li><img src="img/cheese.svg" alt="cheese">
+                            Cheese +3$
                             <input id="cheese" class="add" type="checkbox" value="3">
                         </li>
-                        <li>Egg +5$
+                        <li><img src="img/fried-egg.svg" alt="egg">
+                            Egg +5$
                             <input id="egg" class="add" type="checkbox" value="5">
                         </li>
-                        <li>Mustard +3$
+                        <li><img src="img/mustard.svg" alt="mustard">
+                            Mustard +3$
                             <input id="mustard" class="add" type="checkbox" value="3">
                         </li>
                     </ul>
 
                     <ul class="ingredients-list">
-                        <li>Tomato +3$
+                        <li><img src="img/tomato.svg" alt="tomato">
+                            Tomato +3$
                             <input id="tomato" class="add" type="checkbox" value="3">
                         </li>
-                        <li>Lettuce +2$
+                        <li><img src="img/lettuce.svg" alt="lettuce">
+                            Lettuce +2$
                             <input id="lettuce" class="add" type="checkbox" value="2">
                         </li>
-                        <li>Ketchup +1$
+                        <li><img src="img/ketchup.svg" alt="ketchup">
+                            Ketchup +1$
                             <input id="ketchup" class="add" type="checkbox" value="1">
                         </li>
                     </ul>
                 </div>
+                <!-- ingredients  -->
 
-                <div class="coupon">
-                    <span>Discount Coupon</span>
-                    <span><input id ="coupon" value="" type="text" placeholder="insert coupon"></span>
+                <div class="coupon-container">
+                    <span class="coupon-title">Discount Coupon</span>
+                    <input id="coupon" value="" type="text" placeholder="  insert coupon">
                 </div>
             </section>
 
-            <section>
+            <section class="button-container">
                 <button id="calculate">Calculate</button>
             </section>
         </main>
@@ -68,12 +76,23 @@
 
         <!-- footer  -->
         <footer class="footer-wrapper">
-            <div class="total">
-                
-                <h2>Your Price</h2>
-                <h3 id="final-price">50 $</h3>
-
+            
+            <div class="price-box">
+                <h4 id="choice"></h4>
+                <h3 id="price"></h3>
             </div>
+
+            <div class="discount-box">
+                <h3 id="discount-text"></h3>
+                <h3 id="discount"></h3>
+            </div>
+
+            <div class="total-box">
+                <h3 id="your-price">Your Price</h3>
+                <h3 id="total"></h3>
+                
+            </div>
+            
         </footer>
         <!-- end footer  -->
     </div>
